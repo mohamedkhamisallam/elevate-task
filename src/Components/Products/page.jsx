@@ -33,7 +33,7 @@ const [search, setSearch] = useState('')
     products.length==0?<Loading/>:
     products.filter(ele=>
       search.toLowerCase()===''?products:
-      ele.title.toLowerCase().includes(search)
+      ele.title.toLowerCase().includes(search.toLowerCase())
       ).map ((ele) => (
         
         <div key={ele.id} className="p-4 border rounded shadow-md hover:cursor-pointer container relative bg-slate-200">
